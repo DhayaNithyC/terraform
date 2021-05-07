@@ -25,6 +25,8 @@
   Note : You can find "Vagrantfile" which will be created automatically.
    
 * Open "Vagrantfile" Delete all lines and update below code.
+
+[Code]
   
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
