@@ -1,4 +1,4 @@
-# Roadmap Training
+# Roadmap of Training
 
 * Prerequsites [To setup Lab environment]
 * Road-map
