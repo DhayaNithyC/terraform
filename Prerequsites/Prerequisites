@@ -1,33 +1,33 @@
-* Install Virtual box:
-  Link : https://www.virtualbox.org/wiki/Downloads
+1. Install Virtual box:
+   Link : https://www.virtualbox.org/wiki/Downloads
 
-* Install Vagrant:
-  Link : https://www.vagrantup.com/downloads
+2. Install Vagrant:
+   Link : https://www.vagrantup.com/downloads
 
-* Download VSCode:
-  Link : https://code.visualstudio.com/download
+3. Download VSCode:
+   Link : https://code.visualstudio.com/download
   
- * Open one AWS account:
+4. Open one AWS account:
    Link : https://aws.amazon.com/console/
 
-* Create shared folder [In any drive]
-  [Folder structure]
-  D drive :
-   - Shared 
+5. Create shared folder [In any drive]
+   [Folder structure]
+   D drive :
+    - Shared 
      - data
-
-* Open VScode:
-  Navigate to File -> Open -> Select your shared folder
+     
+6. Open VScode:
+   Navigate to File -> Open -> Select your shared folder
   
-* Run Vagrant command:
-  Click on folder data under shared.
-  Run command "vagrant init"
-  Note : You can find "Vagrantfile" which will be created automatically.
+7. Run Vagrant command:
+   Click on folder data under shared.
+   Run command "vagrant init"
+   Note : You can find "Vagrantfile" which will be created automatically.
    
-* Open "Vagrantfile" Delete all lines and update below code.
+8. Open "Vagrantfile" Delete all lines and update below code.
 
 [Code]
-  
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
@@ -44,3 +44,7 @@ Vagrant.configure("2") do |config|
     end
   end
 end
+
+9. Command to bring up the Virtual machines.
+   vagrant up
+   vagrant ssh TF-Master
