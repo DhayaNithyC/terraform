@@ -6,11 +6,14 @@
 
 * Download VSCode:
   Link : https://code.visualstudio.com/download
+  
+ * Open one AWS account:
+   Link : https://aws.amazon.com/console/
 
 * Create shared folder [In any drive]
   [Folder structure]
   D drive :
-    - Shared 
+   - Shared 
      - data
 
 * Open VScode:
@@ -26,14 +29,14 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
-  config.vm.define "Master-node" do |vm1|
-    vm1.vm.hostname = "Master"
+  config.vm.define "TF-Master" do |vm1|
+    vm1.vm.hostname = "TF-Master"
     vm1.vm.box = "ubuntu/trusty64"
     vm1.vm.network "private_network", ip: "192.168.33.10"
     vm1.vm.network "forwarded_port", guest: 8080, host: 9000, host_ip: "127.0.0.1", auto_correct: true
     vm1.vm.network "forwarded_port", guest: 80, host: 9001, host_ip: "127.0.0.1", auto_correct: true
     vm1.vm.provider "virtualbox" do |vb|
-      vb.name = "Master-node"
+      vb.name = "TF-Master"
       vb.gui = false
       vb.memory = "2024"
     end
