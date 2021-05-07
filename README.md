@@ -30,6 +30,6 @@
     
 * Example codes [Find the example codes in codes folder]
 
-# Trainer details
+# Contact me:
 * Email : vijayprabhu.cs@gmail.com
 * Mobile : +918056375375
