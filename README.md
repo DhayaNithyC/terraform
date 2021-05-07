@@ -28,7 +28,7 @@
     * Sample code for other service provider
     * Certification details
     
-* Example codes [Find the example codes in code folder]
+* Example codes [Find the example codes in codes folder]
 
 # Trainer details
 * Email : vijayprabhu.cs@gmail.com
