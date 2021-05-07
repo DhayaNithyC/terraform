@@ -1,10 +1,41 @@
-* Install Virtual box :
+* Install Virtual box:
   Link : https://www.virtualbox.org/wiki/Downloads
 
-* Install Vagrant :
+* Install Vagrant:
   Link : https://www.vagrantup.com/downloads
 
-* Download VSCode :
+* Download VSCode:
   Link : https://code.visualstudio.com/download
 
 * Create shared folder [In any drive]
+  [Folder structure]
+  D drive :
+    - Shared 
+     - data
+
+* Open VScode:
+  Navigate to File -> Open -> Select your shared folder
+  
+* Run Vagrant command:
+  Click on folder data under shared.
+  Run command "vagrant init"
+  Note : You can find "Vagrantfile" which will be created automatically.
+   
+* Open "Vagrantfile" Delete all lines and update below code.
+  
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure("2") do |config|
+  config.vm.define "Master-node" do |vm1|
+    vm1.vm.hostname = "Master"
+    vm1.vm.box = "ubuntu/trusty64"
+    vm1.vm.network "private_network", ip: "192.168.33.10"
+    vm1.vm.network "forwarded_port", guest: 8080, host: 9000, host_ip: "127.0.0.1", auto_correct: true
+    vm1.vm.network "forwarded_port", guest: 80, host: 9001, host_ip: "127.0.0.1", auto_correct: true
+    vm1.vm.provider "virtualbox" do |vb|
+      vb.name = "Master-node"
+      vb.gui = false
+      vb.memory = "2024"
+    end
+  end
+end
